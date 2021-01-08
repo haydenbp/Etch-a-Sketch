@@ -1,9 +1,45 @@
+body{
+    margin-top: 100px
+
+}
+
+
 container{
-
-    width: 100%;
-    max-width: 100%;
+    
     margin: 0 auto;
-    background-color: black;
+    display: flex;
+    width: 500px;
+    height: 500px;
+    background-color: rgb(207, 186, 207);
+    flex-wrap: wrap;
 
+}
+
+cell{
+  
+    background-color: purple;
+    text-align: center;
+    
+    
+}
+.hover{
+    
+}
+
+.hover:hover{
+    background-color: red;
+}
+
+.slidecontainer{
+    margin-top: 100px;
+    margin: 0 auto;
+    display: flex;
+    width: 500px;
+    height: 100px;
+    background-color: rgb(18, 20, 119);
+}
+
+.slider{
+    flex-basis: 100%;
 }
 

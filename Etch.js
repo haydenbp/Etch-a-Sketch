@@ -1,27 +1,60 @@
-const div = document.createElement('div');
-const cell = document.createElement('cell');
 
-const container = document.createElement('container');
 
-const body = document.querySelector('body');
+const container = document.querySelector('container');
 
-body.appendChild(container);
-container.appendChild(div);
-body.appendChild(div)
+const cells = document.querySelectorAll('cell');
+const slider = document.querySelector('input');
 
-let i = 3;
 
-while(i>0){
+
+createGrid = gridNumber =>{
+  let cellLength = `${100/gridNumber}%`
+
+  let gridArea = gridNumber**2
+
+    while(gridArea>0){
     const cell = document.createElement('cell');
     container.appendChild(cell);
-    i--;
+    cell.style.flexBasis = cellLength;
+    cell.style.height = cellLength;
+    cell.addEventListener("mouseover", event => {
+        cell.className = "hover"
+    })
+    gridArea--;
+    }
+    
+};
 
 
-}
+createGrid(slider.value);
 
 
 
-console.log(body)
+console.log(cells)
+
+
+
+resetGrid = () =>{
+
+    let gridPixels = container.querySelectorAll('cell');
+    console.log(gridPixels)
+  
+
+gridPixels.forEach(item =>item.remove());
+createGrid(slider.value);
+
+};
+
+
+
+slider.addEventListener('change', ()=>{
+
+    
+    resetGrid();
+
+});
+
+
 
 
 
