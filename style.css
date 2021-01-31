@@ -22,8 +22,10 @@ cell{
     
     
 }
-.hover{
-    
+.title{
+
+    flex-basis: 100%;
+    text-align: center;
 }
 
 .hover:hover{
